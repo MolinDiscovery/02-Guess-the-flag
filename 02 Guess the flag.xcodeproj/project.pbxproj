@@ -10,8 +10,9 @@
 		351F0A6A1C58DBF20053E363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351F0A691C58DBF20053E363 /* AppDelegate.swift */; };
 		351F0A6C1C58DBF20053E363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351F0A6B1C58DBF20053E363 /* ViewController.swift */; };
 		351F0A6F1C58DBF20053E363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351F0A6D1C58DBF20053E363 /* Main.storyboard */; };
-		351F0A711C58DBF20053E363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 351F0A701C58DBF20053E363 /* Assets.xcassets */; };
 		351F0A741C58DBF20053E363 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351F0A721C58DBF20053E363 /* LaunchScreen.storyboard */; };
+		35A63BBF1C66D29900B9B606 /* ViewControllerHard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A63BBE1C66D29900B9B606 /* ViewControllerHard.swift */; };
+		35FB653C1C66E424006D79DC /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35FB653B1C66E424006D79DC /* assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,9 +20,10 @@
 		351F0A691C58DBF20053E363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		351F0A6B1C58DBF20053E363 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		351F0A6E1C58DBF20053E363 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		351F0A701C58DBF20053E363 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		351F0A731C58DBF20053E363 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		351F0A751C58DBF20053E363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35A63BBE1C66D29900B9B606 /* ViewControllerHard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerHard.swift; sourceTree = "<group>"; };
+		35FB653B1C66E424006D79DC /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +58,9 @@
 			children = (
 				351F0A691C58DBF20053E363 /* AppDelegate.swift */,
 				351F0A6B1C58DBF20053E363 /* ViewController.swift */,
+				35A63BBE1C66D29900B9B606 /* ViewControllerHard.swift */,
 				351F0A6D1C58DBF20053E363 /* Main.storyboard */,
-				351F0A701C58DBF20053E363 /* Assets.xcassets */,
+				35FB653B1C66E424006D79DC /* assets.xcassets */,
 				351F0A721C58DBF20053E363 /* LaunchScreen.storyboard */,
 				351F0A751C58DBF20053E363 /* Info.plist */,
 			);
@@ -124,7 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				351F0A741C58DBF20053E363 /* LaunchScreen.storyboard in Resources */,
-				351F0A711C58DBF20053E363 /* Assets.xcassets in Resources */,
+				35FB653C1C66E424006D79DC /* assets.xcassets in Resources */,
 				351F0A6F1C58DBF20053E363 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +141,7 @@
 			files = (
 				351F0A6C1C58DBF20053E363 /* ViewController.swift in Sources */,
 				351F0A6A1C58DBF20053E363 /* AppDelegate.swift in Sources */,
+				35A63BBF1C66D29900B9B606 /* ViewControllerHard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +257,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "02 Guess the flag/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Wussypants.-2-Guess-the-flag";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -267,6 +272,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "02 Guess the flag/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Wussypants.-2-Guess-the-flag";
 				PRODUCT_NAME = "$(TARGET_NAME)";

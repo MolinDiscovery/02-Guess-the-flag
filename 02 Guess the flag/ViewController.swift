@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var Button2: UIButton!
     @IBOutlet weak var Button3: UIButton!
     
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     var countries = [String]()
     var currentAnswer = 0
     var score = 0
@@ -27,8 +29,8 @@ class ViewController: UIViewController {
         
         // Adds a border of 1 point around our buttons
         Button1.layer.borderWidth = 1
-        Button2.layer.borderWidth = 2
-        Button3.layer.borderWidth = 3
+        Button2.layer.borderWidth = 1
+        Button3.layer.borderWidth = 1
         
         // Changes the color of this border to be slightly gray
         Button1.layer.borderColor = UIColor.lightGrayColor().CGColor
@@ -37,6 +39,9 @@ class ViewController: UIViewController {
         
         // Calls the AskQuestion function to start the game
         AskQuestion()
+        
+        // Displays the score at the bottom on a label
+        displayScore()
     }
 
     /// Assigns the first three images from the array of countries. This array will be random.
@@ -55,6 +60,18 @@ class ViewController: UIViewController {
         title = countries[currentAnswer].uppercaseString
     }
     
+    func displayScore()
+    {
+        scoreLabel.text = "Your score is: \(score)"
+    }
+    
+    func resetGame(action: UIAlertAction!=nil)
+    {
+        score = 0
+        displayScore()
+        AskQuestion()
+    }
+    
     @IBAction func buttonTapped(sender: UIButton) {
         var title: String!
         
@@ -68,9 +85,24 @@ class ViewController: UIViewController {
             score -= 10
         }
         
+        // Initialize a UIAlertController to display a message on the screen with the score
         let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .Alert)
-        ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: AskQuestion))
+        
+        // Make an action to the UIAlertController to continue
+        let continueAction = UIAlertAction(title: "Continue", style: .Default, handler: AskQuestion)
+        
+        // Make an action the reset the game
+        let resetAction = UIAlertAction(title: "Reset Game", style: .Destructive, handler: resetGame)
+        
+        // Adds the action buttons to the UIAlertController
+        ac.addAction(continueAction)
+        ac.addAction(resetAction)
+        
+        // Call the presenter
         presentViewController(ac, animated: true, completion: nil)
+        
+        // Update the score displayed on the front view
+        displayScore()
     }
     
     
